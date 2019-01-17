@@ -34,4 +34,8 @@ public class TokenUtil {
         loginToken.setRandomnum(new Random().nextLong());
         return EncryptUtil.AESEnc(Base64Util.base64Dec(SystemConst.TOKENKEY),JSON.toJSONString(loginToken));
     }
+    //解析Token
+    public static LoginToken parseToken(String token){
+        return JSON.parseObject(EncryptUtil.AESDec(Base64Util.base64Dec(SystemConst.TOKENKEY),token),LoginToken.class);
+    }
 }

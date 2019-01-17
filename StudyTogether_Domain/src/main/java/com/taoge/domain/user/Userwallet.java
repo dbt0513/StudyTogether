@@ -7,7 +7,7 @@ import com.taoge.domain.base.BaseEmtity;
  * @Date: 2019/1/16 12:11
  * @Version 1.0
  */
-public class UserWallet extends BaseEmtity {
+public class Userwallet extends BaseEmtity {
     private static final long serialVersionUID = 1L;
 
     private Integer uid;
