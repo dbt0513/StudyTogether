@@ -8,51 +8,64 @@ import com.taoge.domain.base.BaseEmtity;
 import java.time.LocalDateTime;
 
 /**
- * @Author: taoge
- * @Date: 2019/1/16 12:14
- * @Version 1.0
+ * <p>
+ * 
+ * </p>
+ *
+ * @author java1806
+ * @since 2019-01-21
  */
-@TableName("userrec")
-public class Userrec extends BaseEmtity {
+@TableName("userlike")
+public class Userlike extends BaseEmtity {
+
+    private static final long serialVersionUID = 1L;
     @TableId(value = "id", type = IdType.AUTO)
     private Integer id;
+    private Integer uid;
 
-    private Integer touid;
-
-    private Integer beuid;
-
-    private Integer shell;
+    private Integer vid;
 
     private LocalDateTime createtime;
+
+    private Integer type;
 
     public Integer getId() {
         return id;
     }
+
     public void setId(Integer id) {
         this.id = id;
     }
-    public Integer getTouid() {
-        return touid;
+
+    public Integer getUid() {
+        return uid;
     }
-    public void setTouid(Integer touid) {
-        this.touid = touid;
+
+    public void setUid(Integer uid) {
+        this.uid = uid;
     }
-    public Integer getBeuid() {
-        return beuid;
+
+    public Integer getVid() {
+        return vid;
     }
-    public void setBeuid(Integer beuid) {
-        this.beuid = beuid;
+
+    public void setVid(Integer vid) {
+        this.vid = vid;
     }
-    public Integer getShell() {
-        return shell;
-    }
-    public void setShell(Integer shell) {
-        this.shell = shell;
-    }
+
     public LocalDateTime getCreatetime() {
         return createtime;
     }
+
     public void setCreatetime(LocalDateTime createtime) {
         this.createtime = createtime;
+    }
+
+    public Integer getType() {
+        return type;
+    }
+
+    public void setType(Integer type) {
+        this.type = type;
     }
 }

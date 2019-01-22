@@ -12,6 +12,7 @@
         <module>StudyTogether_Dao</module>
         <module>StudyTogether_Common</module>
         <module>StudyTogether_Service</module>
+        <module>StudyTogether_MQ</module>
     </modules>
     <packaging>pom</packaging>
     <!--声明属性-->

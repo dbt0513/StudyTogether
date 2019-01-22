@@ -8,51 +8,65 @@ import com.taoge.domain.base.BaseEmtity;
 import java.time.LocalDateTime;
 
 /**
- * @Author: taoge
- * @Date: 2019/1/16 12:14
- * @Version 1.0
+ * <p>
+ * 
+ * </p>
+ *
+ * @author java1806
+ * @since 2019-01-21
  */
-@TableName("userlog")
-public class Userlog extends BaseEmtity {
-    @TableId(value = "id", type = IdType.AUTO)
-    private Long id;
+@TableName("userappraise")
+public class Userappraise extends BaseEmtity {
 
-    private Integer type;
+    private static final long serialVersionUID = 1L;
+
+    @TableId(value = "id", type = IdType.AUTO)
+    private Integer id;
+    private Integer uid;
 
     private String content;
 
+    private Integer score;
+
     private LocalDateTime createtime;
 
-    private int uid;
-
-    public Long getId() {
+    public Integer getId() {
         return id;
     }
-    public void setId(Long id) {
+
+    public void setId(Integer id) {
         this.id = id;
     }
-    public Integer getType() {
-        return type;
+
+    public Integer getUid() {
+        return uid;
     }
-    public void setType(Integer type) {
-        this.type = type;
+
+    public void setUid(Integer uid) {
+        this.uid = uid;
     }
+
     public String getContent() {
         return content;
     }
+
     public void setContent(String content) {
         this.content = content;
     }
+
+    public Integer getScore() {
+        return score;
+    }
+
+    public void setScore(Integer score) {
+        this.score = score;
+    }
+
     public LocalDateTime getCreatetime() {
         return createtime;
     }
+
     public void setCreatetime(LocalDateTime createtime) {
         this.createtime = createtime;
-    }
-    public int getUid() {
-        return uid;
-    }
-    public void setUid(int uid) {
-        this.uid = uid;
     }
 }

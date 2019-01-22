@@ -1,57 +1,62 @@
-package com.taoge.domain.user;
+package com.taoge.domain.video;
+
 
 import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
 import com.taoge.domain.base.BaseEmtity;
 
+import java.io.Serializable;
 import java.time.LocalDateTime;
 
 /**
- * @Author: taoge
- * @Date: 2019/1/16 12:14
- * @Version 1.0
+ * <p>
+ * 
+ * </p>
+ *
+ * @author java1806
+ * @since 2019-01-21
  */
-@TableName("userrec")
-public class Userrec extends BaseEmtity {
+@TableName("videotype")
+public class Videotype extends BaseEmtity {
+
+    private static final long serialVersionUID = 1L;
     @TableId(value = "id", type = IdType.AUTO)
     private Integer id;
+    private String name;
 
-    private Integer touid;
-
-    private Integer beuid;
-
-    private Integer shell;
+    private String info;
 
     private LocalDateTime createtime;
 
     public Integer getId() {
         return id;
     }
+
     public void setId(Integer id) {
         this.id = id;
     }
-    public Integer getTouid() {
-        return touid;
+
+    public String getName() {
+        return name;
     }
-    public void setTouid(Integer touid) {
-        this.touid = touid;
+
+    public void setName(String name) {
+        this.name = name;
     }
-    public Integer getBeuid() {
-        return beuid;
+
+    public String getInfo() {
+        return info;
     }
-    public void setBeuid(Integer beuid) {
-        this.beuid = beuid;
+
+    public void setInfo(String info) {
+        this.info = info;
     }
-    public Integer getShell() {
-        return shell;
-    }
-    public void setShell(Integer shell) {
-        this.shell = shell;
-    }
+
     public LocalDateTime getCreatetime() {
         return createtime;
     }
+
     public void setCreatetime(LocalDateTime createtime) {
         this.createtime = createtime;
     }

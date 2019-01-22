@@ -1,5 +1,8 @@
 package com.taoge.domain.user;
 
+import com.baomidou.mybatisplus.annotation.IdType;
+import com.baomidou.mybatisplus.annotation.TableId;
+import com.baomidou.mybatisplus.annotation.TableName;
 import com.taoge.domain.base.BaseEmtity;
 
 import java.time.LocalDateTime;
@@ -9,9 +12,10 @@ import java.time.LocalDateTime;
  * @Date: 2019/1/16 12:12
  * @Version 1.0
  */
+@TableName("usersignin")
 public class Usersignin extends BaseEmtity {
     private static final long serialVersionUID = 1L;
-
+    @TableId(value = "id", type = IdType.AUTO)
     private Long id;
 
     private Integer uid;

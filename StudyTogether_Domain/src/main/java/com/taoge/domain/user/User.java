@@ -1,5 +1,8 @@
 package com.taoge.domain.user;
 
+import com.baomidou.mybatisplus.annotation.IdType;
+import com.baomidou.mybatisplus.annotation.TableId;
+import com.baomidou.mybatisplus.annotation.TableName;
 import com.taoge.domain.base.BaseEmtity;
 
 /**
@@ -7,7 +10,9 @@ import com.taoge.domain.base.BaseEmtity;
  * @Date: 2019/1/15 9:36
  * @Version 1.0
  */
+@TableName("user")
 public class User extends BaseEmtity {
+    @TableId(value = "id", type = IdType.AUTO)
     private int id;
     private String phone;
     private String password;

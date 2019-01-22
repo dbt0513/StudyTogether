@@ -1,5 +1,7 @@
 package com.taoge.domain.user;
 
+import com.baomidou.mybatisplus.annotation.TableId;
+import com.baomidou.mybatisplus.annotation.TableName;
 import com.taoge.domain.base.BaseEmtity;
 
 /**
@@ -7,9 +9,10 @@ import com.taoge.domain.base.BaseEmtity;
  * @Date: 2019/1/16 12:11
  * @Version 1.0
  */
+@TableName("userwallet")
 public class Userwallet extends BaseEmtity {
     private static final long serialVersionUID = 1L;
-
+    @TableId(value = "uid")
     private Integer uid;
 
     private Integer totalshell;

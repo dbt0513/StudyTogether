@@ -1,5 +1,8 @@
 package com.taoge.domain.user;
 
+import com.baomidou.mybatisplus.annotation.IdType;
+import com.baomidou.mybatisplus.annotation.TableId;
+import com.baomidou.mybatisplus.annotation.TableName;
 import com.taoge.domain.base.BaseEmtity;
 
 import java.time.LocalDate;
@@ -9,7 +12,9 @@ import java.time.LocalDate;
  * @Date: 2019/1/16 12:13
  * @Version 1.0
  */
+@TableName("usershell")
 public class Usershell extends BaseEmtity {
+    @TableId(value = "id", type = IdType.AUTO)
     private Long id;
 
     private Integer shell;

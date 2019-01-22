@@ -1,5 +1,7 @@
 package com.taoge.domain.user;
 
+import com.baomidou.mybatisplus.annotation.TableId;
+import com.baomidou.mybatisplus.annotation.TableName;
 import com.taoge.domain.base.BaseEmtity;
 
 import java.time.LocalDate;
@@ -9,9 +11,10 @@ import java.time.LocalDate;
  * @Date: 2019/1/16 12:15
  * @Version 1.0
  */
+@TableName("userdetial")
 public class Userdetial extends BaseEmtity {
     private static final long serialVersionUID = 1L;
-
+    @TableId(value = "uid")
     private Integer uid;
 
     private String nickname;

@@ -1,58 +1,73 @@
-package com.taoge.domain.user;
+package com.taoge.domain.pay;
+
 
 import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
 import com.taoge.domain.base.BaseEmtity;
 
+import java.io.Serializable;
 import java.time.LocalDateTime;
 
 /**
- * @Author: taoge
- * @Date: 2019/1/16 12:14
- * @Version 1.0
+ * <p>
+ * 
+ * </p>
+ *
+ * @author java1806
+ * @since 2019-01-21
  */
-@TableName("userlog")
-public class Userlog extends BaseEmtity {
-    @TableId(value = "id", type = IdType.AUTO)
-    private Long id;
+@TableName("userpaylog")
+public class Userpaylog extends BaseEmtity {
 
-    private Integer type;
+    private static final long serialVersionUID = 1L;
+    @TableId(value = "id", type = IdType.AUTO)
+    private Integer id;
+    private Integer uoid;
+
+    private Integer shell;
 
     private String content;
 
     private LocalDateTime createtime;
 
-    private int uid;
-
-    public Long getId() {
+    public Integer getId() {
         return id;
     }
-    public void setId(Long id) {
+
+    public void setId(Integer id) {
         this.id = id;
     }
-    public Integer getType() {
-        return type;
+
+    public Integer getUoid() {
+        return uoid;
     }
-    public void setType(Integer type) {
-        this.type = type;
+
+    public void setUoid(Integer uoid) {
+        this.uoid = uoid;
     }
+
+    public Integer getShell() {
+        return shell;
+    }
+
+    public void setShell(Integer shell) {
+        this.shell = shell;
+    }
+
     public String getContent() {
         return content;
     }
+
     public void setContent(String content) {
         this.content = content;
     }
+
     public LocalDateTime getCreatetime() {
         return createtime;
     }
+
     public void setCreatetime(LocalDateTime createtime) {
         this.createtime = createtime;
-    }
-    public int getUid() {
-        return uid;
-    }
-    public void setUid(int uid) {
-        this.uid = uid;
     }
 }
