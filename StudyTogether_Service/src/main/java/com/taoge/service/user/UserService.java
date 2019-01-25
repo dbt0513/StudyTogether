@@ -1,7 +1,9 @@
 package com.taoge.service.user;
 
+import com.taoge.common.vo.PageVo;
 import com.taoge.common.vo.ResultVo;
 import com.taoge.domain.user.User;
+import com.taoge.domain.user.Userappraise;
 
 /**
  * @Author: taoge
@@ -19,4 +21,8 @@ public interface UserService {
     ResultVo loginout(String token);
     //查询主页内容
     ResultVo queryHome(String token);
+    //用户评价
+    ResultVo savaAooraise(Userappraise userappraise);
+    //生成推荐的专属海报
+    ResultVo createRec(String token);
 }

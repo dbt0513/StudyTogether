@@ -26,7 +26,9 @@ public class Userlike extends BaseEmtity {
     private Integer vid;
 
     private LocalDateTime createtime;
-
+    /**
+     * 1表示收藏 2表示喜欢
+     */
     private Integer type;
 
     public Integer getId() {

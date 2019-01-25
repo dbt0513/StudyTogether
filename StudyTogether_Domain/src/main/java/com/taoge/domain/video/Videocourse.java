@@ -38,6 +38,33 @@ public class Videocourse extends BaseEmtity {
     private String name;
 
     private Integer vtid;
+    private  int vcount;
+    private String vcimgurl;
+    private String info;
+
+    public int getVcount() {
+        return vcount;
+    }
+
+    public void setVcount(int vcount) {
+        this.vcount = vcount;
+    }
+
+    public String getVcimgurl() {
+        return vcimgurl;
+    }
+
+    public void setVcimgurl(String vcimgurl) {
+        this.vcimgurl = vcimgurl;
+    }
+
+    public String getInfo() {
+        return info;
+    }
+
+    public void setInfo(String info) {
+        this.info = info;
+    }
 
     public Integer getId() {
         return id;

@@ -7,7 +7,6 @@ import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
 import com.taoge.domain.base.BaseEmtity;
 
-import java.io.Serializable;
 import java.time.LocalDateTime;
 
 /**
@@ -24,7 +23,7 @@ public class Paycode extends BaseEmtity {
     private static final long serialVersionUID = 1L;
     @TableId(value = "id", type = IdType.AUTO)
     private Integer id;
-    private Integer oid;
+    private String oid;
 
     private Integer money;
 
@@ -44,11 +43,11 @@ public class Paycode extends BaseEmtity {
         this.id = id;
     }
 
-    public Integer getOid() {
+    public String getOid() {
         return oid;
     }
 
-    public void setOid(Integer oid) {
+    public void setOid(String oid) {
         this.oid = oid;
     }
 

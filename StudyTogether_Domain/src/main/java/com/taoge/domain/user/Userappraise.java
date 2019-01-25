@@ -29,6 +29,24 @@ public class Userappraise extends BaseEmtity {
     private Integer score;
 
     private LocalDateTime createtime;
+    private Integer vid;////如果type为1 课程的id 为2就是视频的id
+    private Integer type;//类型 1表示 视频课程的评价  2表示视频评价
+
+    public Integer getVid() {
+        return vid;
+    }
+
+    public void setVid(Integer vid) {
+        this.vid = vid;
+    }
+
+    public Integer getType() {
+        return type;
+    }
+
+    public void setType(Integer type) {
+        this.type = type;
+    }
 
     public Integer getId() {
         return id;

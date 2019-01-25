@@ -37,6 +37,24 @@ public class Video extends BaseEmtity{
     private LocalDateTime createtime;
 
     private LocalDateTime endtime;
+    private String videoimgurl;
+    private String info;
+
+    public String getVideoimgurl() {
+        return videoimgurl;
+    }
+
+    public void setVideoimgurl(String videoimgurl) {
+        this.videoimgurl = videoimgurl;
+    }
+
+    public String getInfo() {
+        return info;
+    }
+
+    public void setInfo(String info) {
+        this.info = info;
+    }
 
     public Integer getId() {
         return id;

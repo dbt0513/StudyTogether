@@ -27,4 +27,6 @@ public interface PayService {
     //我的消费清单
     ResultVo queryShell(String token);
     //
+    //我的钱包
+    ResultVo querywallet(String token);
 }
